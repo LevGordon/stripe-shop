@@ -20,7 +20,7 @@ const Home = ({products, bannerData}) => {
 
 
 
-     <FooterBanner />
+     <FooterBanner bannerData={bannerData.length && bannerData[0]}/>
     </>
   )
 }
