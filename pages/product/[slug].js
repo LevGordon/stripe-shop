@@ -7,10 +7,12 @@ import {
   AiOutlineStar,
 } from "react-icons/ai";
 import { Product } from "../../components";
+import { useStateContext } from '../../context/StateContext'
 
 function ProductDetails({ product, products }) {
   const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
+  const {decQty, incQty, qty} = useStateContext()
 
   return (
     <div>
@@ -25,6 +27,7 @@ function ProductDetails({ product, products }) {
           <div className="small-images-container">
             {image?.map((item, i) => (
               <img
+                key={i}
                 src={urlFor(item)}
                 className={
                   i === index ? "small-image selected-image" : "small-image"
@@ -53,13 +56,13 @@ function ProductDetails({ product, products }) {
           <div className="quantity">
             <h3>Quantity: </h3>
             <p className="quantity-desc">
-              <span className="minus" onClick={""}>
+              <span className="minus" onClick={decQty}>
                 <AiOutlineMinus />
               </span>
-              <span className="num" onClick={""}>
-                0
+              <span className="num" onClick={''}>
+                {qty}
               </span>
-              <span className="plus" onClick={""}>
+              <span className="plus" onClick={incQty}>
                 <AiOutlinePlus />
               </span>
             </p>
