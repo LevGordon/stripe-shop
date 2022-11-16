@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import Link from "next/link";
 import {
   AiOutlineMinus,
   AiOutlinePlus,
@@ -33,7 +32,6 @@ function Cart() {
           <div className="empty-cart">
             <AiOutlineShopping size={150} />
             <h3> Your shopping cart is empty</h3>
-            <Link href="/">
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
@@ -41,7 +39,6 @@ function Cart() {
               >
                 Continue Shopping!
               </button>
-            </Link>
           </div>
         )}
 

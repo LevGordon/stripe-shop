@@ -17,10 +17,10 @@ const Context = createContext()
     const onAdd = (product, quantity) => {
         const checkProductInCart = cartItems.find((item) => item._id === product._id)
 
-        if(checkProductInCart) {
-            setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity)
-            setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity)
+        setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity)
+        setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity)
 
+        if(checkProductInCart) {
             const updatedCartItems = cartItems.map((cartProduct) => {
                 if(cartProduct._id === product._id) return {
                     ...cartProduct,
