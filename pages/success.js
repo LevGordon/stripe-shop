@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { BsBagCheckFill } from 'react-icons/bs'
 
 import { useStateContext } from '../context/StateContext'
+import { runConfetti } from '../lib/utils'
 
 function Success() {
     const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext()
@@ -12,7 +13,7 @@ function Success() {
         setCartItems([])
         setTotalPrice(0)
         setTotalQuantities(0)
-
+        runConfetti()
     }, [])
 
   return (
