@@ -12,7 +12,7 @@ function HeroBanner({ bannerData }) {
             <h1>{bannerData.largeText1}</h1>
             <img src={urlFor(bannerData.image)} alt='headphones' className='hero-banner-image' />
             <div>
-                <Link href={`/product/${bannerData.product}`}>
+                <Link href={`/product/hyperx-maxcomfort`}>
                     <button type='button'>{bannerData.buttonText}</button>
 
                 </Link>
