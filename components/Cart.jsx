@@ -16,7 +16,7 @@ function Cart() {
   const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
-  const handleCheckout = async () => {
+    const handleCheckout = async () => {
     const stripe = await getStripe();
 
     const response = await fetch('/api/stripe', {
@@ -51,7 +51,7 @@ function Cart() {
         {cartItems.length < 1 && (
           <div className="empty-cart">
             <AiOutlineShopping size={150} />
-            <h3> Your shopping cart is empty</h3>
+            <h3>Your shopping cart is empty</h3>
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
