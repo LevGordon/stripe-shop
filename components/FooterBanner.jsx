@@ -18,7 +18,7 @@ function FooterBanner({bannerData: {discount, largeText1, largeText2, saleTime, 
                 <h3>{midText}</h3>
                 <p>{desc}</p>  
                 <Link href={`/product/${product}`}>
-                    <button type='button'>
+                    <button type='button' className='btn'>
                         {buttonText}
                     </button>
                 </Link>
