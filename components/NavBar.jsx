@@ -11,7 +11,7 @@ function NavBar() {
   return (
     <div className='navbar-container'>
         <p className='logo'>
-            <Link href='/'>LG HEADPHONE</Link>
+            <Link href='/'>LG HEADPHONES</Link>
         </p>
 
         <button type='button' className='cart-icon' onClick={() => setShowCart(true)}>
