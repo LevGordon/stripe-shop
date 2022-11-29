@@ -775,6 +775,13 @@ width: 100%;
 
 @media screen and (max-width:1200px) {
 
+  .hero-banner-image{
+    max-width: 400px;
+    max-height: 75%;
+    left: 55%;
+    top: 25%;
+  }
+
   .footer-banner-container {
     height: 850px;
     margin-top: 80px;
@@ -812,10 +819,7 @@ width: 100%;
   }
 
   .hero-banner-image{
-    width: 67%;
-    height: 56%;
-    left: 41%;
-    top: 25%;
+    display: none;
   }
 
   .hero-banner-container{
@@ -951,15 +955,12 @@ width: 100%;
 @media screen and (max-width:580px) {
 
   .footer-banner-container{
-    height: 560px;
+    height: 620px;
     margin-top: 80px;
   }
 
   .footer-banner-image{
-    width: 77%;
-    left: 30%;
-    top: 6%;
-    height: auto;
+  display: none;
   }
 
   .banner-desc .left h3{
